@@ -4,6 +4,32 @@
 
 ---
 
+## 2026-10-30 | 새 노트북(OMEN) 인계 준비 — 하드웨어 연결 전까지 (진행 중)
+
+`docs/guides/20261030_새노트북_작업인계.md` 2절을 진행했다. 노트북은 OMEN 16(i7-13700HX, RTX 4060 Laptop 8GB, RAM 32GB), 사용자 이름 `user`다(`C:\Users\USER\...` 하드코딩이 그대로 맞는다).
+
+- 2-1: 저장소를 `core.autocrlf=false`로 `Desktop\프로젝트\최종프로젝트\bimanual-robot-git`에 새로 받았다. 환경 가이드 0~7절은 2026-10-29에 끝냈다(lerobot 패치·`so101_env`는 `so101_env_requirements.txt` 버전, SmolVLA 80 두 개·토크나이저 수정). 패치·패키지 목록은 그 뒤 바뀌지 않았다.
+  - 7절(로봇 없이): 추론 0.38~0.44초, 불러오기 30~33초, GPU 1.28GB(AC 전원).
+  - OMEN 성능 모드는 **재부팅해야 적용**된다. 재부팅 전에는 추론 2.1초·불러오기 150초였다.
+- 2-2: Astra SDK·드라이버 4.3.0.22를 기존 노트북에서 복사·설치했다. `astra_sdk.py`가 `Downloads` 아래 SDK를 찾는다. OBS 설치.
+- 2-4: Wi-Fi `aicampus_286_6G`(6 GHz) 1순위, `robot` 수동 연결. **새 노트북 IP `192.168.0.157`**(기존 `.175`, DHCP 임대 2시간, MAC `44-38-E8-AB-22-6E`). Pi `192.168.0.159:5600` TCP 연결 OK.
+  - 공유기(`192.168.0.1`) 관리 권한이 없어 고정 할당은 못 한다. `.157`로 진행하고 바뀌면 대응하기로 했다(Windows 수동 고정 IP는 충돌 위험이라 쓰지 않음). 매 회차 전 `ipconfig` 확인 → 바뀌면 QR 재생성, 주행 PC `--order-url`·Pi `--peer` 변경 공지.
+  - Pi `astra_tcp_receiver`는 `--peer`와 다른 송신 IP의 접속을 끊는다(PR #86, 기본값·서비스 `.175`). 주행 담당에게 `--peer 192.168.0.157`, `--order-url http://192.168.0.157:8765` 변경과 PR #86 `.175` 4곳 수정을 요청한다.
+- 2-5: 절전·최대 절전·화면 꺼짐·덮개 닫기 동작·USB 선택적 절전을 AC/DC 모두 끔. Windows 전원 모드 최고 성능(AC·DC, 설정 화면에서 바꿈, 재부팅 불필요), OMEN 성능 모드.
+  - 배터리(충전기 분리, 100%)에서 7절 5회: 물따르기 0.45~0.48초, 컵배치 0.52~0.57초(첫 회 1.48초), 불러오기 34~36초. 충전 중(0.38~0.44초)보다 약 20~30% 느리고 기존 ASUS Performance(0.5~0.6초)와 비슷하다.
+  - 방화벽 `order-server 8765` 인바운드 허용 규칙 추가(사용자가 관리자 PowerShell에서 실행).
+- 2-6: `Desktop\table1_qr.png`(`http://192.168.0.157:8765/order?table=1`) 생성, 디코딩 확인.
+- 하드웨어 없는 테스트: `test_rollout_service_stow`·`test_rollout_service_backend`·`test_service_mission_control` 36개 통과.
+- 하드웨어 연결 후(16시~): `#86`(39b44e8)까지 pull했다(PROGRESS 충돌은 양쪽 기록 보존). 주행 쪽 `--peer`·`--order-url`은 주행 세션이 이미 `.157`로 바꿨다.
+  - 팔 USB는 CH343 `COM3`·`COM4`다. 배터리 맞바꾸기에서 COM3가 실제 왼팔임을 확인해 `start_scenario.bat`을 `LEFT_PORT=COM3`, `RIGHT_PORT=COM4`로 바꿨다(장치 관리자 번호는 그대로).
+  - 오른쪽 손목캠 경로가 `1b3f2dc8` → `2353db1a`(USB 2.0 PC Cam)로 바뀌었다. 캡처에 오른손 집게가 보여 힌트를 바꿨고 왼쪽 `2bd3af6b`(순정 집게)는 그대로다. `resolve_camera_indices.py` → `left=1 right=2 depth=4`.
+  - 오른팔(COM4)이 6/6 무응답이었다(1M/500k/115200bps × ID 1~20 ping 전부). 배터리를 맞바꾸자 무응답이 배터리를 따라가 원래 오른팔 배터리 방전으로 판정했다(보드·케이블·모터 정상). 15:56 물따르기 중 `There is no status packet!`도 같은 원인으로 본다. 충전 대기.
+  - 예약 작업 `AMRArmService`·`AMRAstraCamera`·`AMROrderServer`가 옛 클론 `C:\Users\user\bimanual-robot`과 `%TEMP%\amr_launch_omen.py`로 등록돼 있었다(14:47, 트리거 없음). 같은 시각 주행 PC `192.168.0.217`의 SSH 접속이 이어져 주행 쪽이 만든 것으로 보인다(미확정). 14:53 주문으로 물따르기가 실제 실행됐다. 중지·사용 안 함은 자동 권한 검사에서 거부돼 사용자 실행 대기, 삭제는 사용자 확인 후.
+  - `tools/setup_check.py`(기존 노트북 세션 작성): 정상 31·실패 3(COM15/16, 오른쪽 힌트)·주의 1(pull 전). 방화벽 조회 시간 초과를 OK로 표시하는 문제를 보고했고 수정본을 기다린다.
+- 남은 일: 🙋 예약 작업 중지 → 충전 배터리 → `arm_health.py --left COM3 --right COM4` 6/6·9 V 이상 → 수정본 `setup_check.py --left COM3 --right COM4` 실패 0 → `start_scenario.bat` ready.
+
+---
+
 ## 2026-10-30 | 시연 주행 수정 통합·README 간소화·main 반영 준비
 
 - 사용자 요청으로 원격 주행 브랜치의 대기·TF·재접근 수정과 main의 최신 주문·팔 실행기·Astra 송신기를 합쳤다. 구버전 main의 주행 제어로 되돌아가지 않도록 충돌한 주행 파일은 현행을 유지하고, 관측기에는 독립 TF 수신과 침묵 구독 복구를 함께 보존했다. 기존 등록 지도·교시·목표는 변경하지 않았다.
