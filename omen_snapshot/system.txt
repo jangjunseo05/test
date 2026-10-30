@@ -1,0 +1,59 @@
+﻿# 시스템 정보 (수집 2026-10-30 16:52:23 KST)
+호스트: LAPTOP-3U29RMFK / 모델: HP OMEN by HP Gaming Laptop 16-wf0xxx
+OS: Microsoft Windows 11 Home 10.0.26200 (build 26200)
+CPU: 13th Gen Intel(R) Core(TM) i7-13700HX / 코어 16 스레드 24
+RAM: 31.7 GB
+
+## GPU (nvidia-smi)
+name, driver_version, memory.total [MiB], power.limit [W]
+NVIDIA GeForce RTX 4060 Laptop GPU, 592.82, 8188 MiB, [N/A]
+
+## 전원
+전원 구성표 GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (균형 조정)
+전원 모드 오버레이 AC=ded574b5-45a0-4f42-8737-46345c09c238 DC=ded574b5-45a0-4f42-8737-46345c09c238 (ded574b5-...=최고 성능)
+절전: 0x00000000 / 0x00000000  (AC / DC, 0x0=안 함)
+최대 절전: 0x00000000 / 0x00000000  (AC / DC, 0x0=안 함)
+화면 꺼짐: 0x00000000 / 0x00000000  (AC / DC, 0x0=안 함)
+덮개 닫기:   (AC / DC, 0x0=안 함)
+USB 선택적 절전: 0x00000000 / 0x00000000  (AC / DC, 0x0=안 함)
+배터리: 17% 상태코드 1 (2=AC 연결)
+
+## 네트워크
+로컬 영역 연결* 2: 169.254.48.73/16 (WellKnown)
+이더넷: 169.254.99.67/16 (WellKnown)
+로컬 영역 연결* 1: 169.254.153.136/16 (WellKnown)
+Wi-Fi: 192.168.0.157/24 (Dhcp)
+Tailscale: 100.64.21.25/32 (Manual)
+Bluetooth 네트워크 연결: 169.254.37.105/16 (WellKnown)
+프로필 Wi-Fi 'aicampus_286_6G' = Public
+프로필 Tailscale 'Tailscale' = Private
+SSID                   : aicampus_286_6G
+Band                   : 6 GHz
+Channel                : 85
+Radio type             : 802.11ax
+Signal                 : 90%
+
+## 방화벽 (8765, 22)
+OpenSSH SSH Server (sshd): 사용=True Inbound Allow 프로필=Private 포트=TCP/22 원격주소=Any
+order-server 8765: 사용=True Inbound Allow 프로필=Any 포트=TCP/8765 원격주소=Any
+AMR SSH: 사용=True Inbound Allow 프로필=Any 포트=TCP/22 원격주소=Any
+
+## 장치 (COM·카메라·Astra)
+USB-Enhanced-SERIAL CH343(COM4)  USB\VID_1A86&PID_55D3\5B3D046653
+USB-Enhanced-SERIAL CH343(COM3)  USB\VID_1A86&PID_55D3\5B3E088747
+ORBBEC Depth Sensor [Orbbec] 상태=OK 드라이버=4.3.0.22
+Innomaker-U20CAM-720P   [Camera] 상태=OK 드라이버=10.0.26100.9711
+Orbbec(R) Astra(TM) Audio Devive [MEDIA] 상태=OK 드라이버=10.0.26100.9457
+USB 2.0 PC Cam [Camera] 상태=OK 드라이버=10.0.26100.9711
+마이크(Orbbec(R) Astra(TM) Audio Devive) [AudioEndpoint] 상태=OK 드라이버=10.0.26100.1
+
+## 예약 작업 (AMR*)
+AMRArmService: 상태=Running 계정=user 권한=Highest 마지막 실행=10/30/2026 16:44:31 실행=C:\Users\user\miniconda3\envs\so101_env\pythonw.exe "C:\Users\user\AppData\Local\Temp\amr_launch_omen.py" launch-arms
+AMRAstraCamera: 상태=Running 계정=user 권한=Highest 마지막 실행=10/30/2026 14:47:37 실행=C:\Users\user\miniconda3\envs\so101_env\pythonw.exe "C:\Users\user\AppData\Local\Temp\amr_launch_omen.py" camera
+AMROrderServer: 상태=Running 계정=user 권한=Highest 마지막 실행=10/30/2026 14:48:40 실행=C:\Users\user\miniconda3\envs\so101_env\pythonw.exe "C:\Users\user\AppData\Local\Temp\amr_launch_omen.py" order
+
+## 대기 포트 (8765 주문 서버, 8770 조작 실행기, 22 SSH)
+:::22 PID 15120
+127.0.0.1:8770 PID 26196
+0.0.0.0:8765 PID 8444
+0.0.0.0:22 PID 15120

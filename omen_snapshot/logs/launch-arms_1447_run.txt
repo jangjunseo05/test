@@ -1,0 +1,452 @@
+# launch-arms.log 발췌: 14:47~15:57 첫 실행 (1~1462줄, 반복 경고·traceback 제외)
+[camera resolve] left=1 right=2 depth=4
+[service 14:48:46] 카메라 끊김 보호 켬: 끊기면 마지막 프레임으로 계속하고 뒤에서 다시 연결
+[service 14:48:46] pour 시작 자세 = C:\Users\user\bimanual-robot\config\rollout_poses\pour.json (10관절)
+[service 14:48:46] place 끝 자세 = C:\Users\user\bimanual-robot\config\rollout_poses\place_end.json (10관절)
+[service 14:48:46] 이동 자세 = C:\Users\user\bimanual-robot\config\rollout_poses\place_end.json (10관절, 그리퍼 제외)
+[grip] left(COM3) 실행 전: 토크 꺼짐 - 할 일 없음
+[grip] right(COM4) 실행 전: 토크 꺼짐 - 할 일 없음
+INFO 2026-10-30 14:48:55 \configs.py:380 Resolved device from policy config: cuda
+INFO 2026-10-30 14:48:58 \configs.py:380 Resolved device from policy config: cuda
+[service 14:48:58] 물따르기 정책 로드 + 팔·카메라 연결
+INFO 2026-10-30 14:48:58 \context.py:245 Loading policy from 'C:\Users\user\lerobot-training\outputs/water_pour_chassis_smolvla_80/checkpoints/016000/pretrained_model'...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+INFO 2026-10-30 14:51:58 \context.py:272 Policy loaded: type=smolvla, device=cuda
+INFO 2026-10-30 14:51:58 \context.py:300 Connecting robot (bi_so_follower)...
+INFO 2026-10-30 14:52:05 a_opencv.py:196 OpenCVCamera(1) connected.
+INFO 2026-10-30 14:52:09 a_opencv.py:196 OpenCVCamera(4) connected.
+INFO 2026-10-30 14:52:09 follower.py:109 arms_left SOFollower connected.
+INFO 2026-10-30 14:52:10 a_opencv.py:196 OpenCVCamera(2) connected.
+INFO 2026-10-30 14:52:10 follower.py:109 arms_right SOFollower connected.
+INFO 2026-10-30 14:52:10 \context.py:303 Robot connected: bi_so_follower
+INFO 2026-10-30 14:52:10 \context.py:308 Captured initial robot position (12 keys)
+INFO 2026-10-30 14:52:12 \context.py:487 Creating inference engine (type=sync)...
+INFO 2026-10-30 14:52:12 \factory.py:100 Creating inference engine: sync
+INFO 2026-10-30 14:52:12 ence\sync.py:76 SyncInferenceEngine initialized (device=cuda, action_keys=12)
+INFO 2026-10-30 14:52:12 \context.py:510 Rollout context assembled successfully
+[service 14:52:12] 호출 주소 http://127.0.0.1:8770 (준비 중에는 /run 이 409 not_ready)
+[service 14:52:12] 컵배치 정책 로드
+[service 14:53:10] HTTP POST /stow
+[service 14:53:11] HTTP POST /stow
+[service 14:53:12] HTTP POST /stow
+[service 14:53:13] HTTP POST /stow
+[service 14:53:14] HTTP POST /stow
+[service 14:53:15] HTTP POST /stow
+[service 14:53:16] HTTP POST /stow
+[service 14:53:17] HTTP POST /stow
+[service 14:53:18] HTTP POST /stow
+[service 14:53:19] HTTP POST /stow
+[service 14:53:20] HTTP POST /stow
+[service 14:53:21] HTTP POST /stow
+[service 14:53:22] HTTP POST /stow
+[service 14:53:23] HTTP POST /stow
+[service 14:53:24] HTTP POST /stow
+[service 14:53:25] HTTP POST /stow
+[service 14:53:26] HTTP POST /stow
+[service 14:53:27] HTTP POST /stow
+[service 14:53:28] HTTP POST /stow
+[service 14:53:29] HTTP POST /stow
+[service 14:53:30] HTTP POST /stow
+[service 14:53:31] HTTP POST /stow
+[service 14:53:32] HTTP POST /stow
+[service 14:53:33] HTTP POST /stow
+[service 14:53:34] HTTP POST /stow
+[service 14:53:35] HTTP POST /stow
+[service 14:53:36] HTTP POST /stow
+[service 14:53:37] HTTP POST /stow
+[service 14:53:38] HTTP POST /stow
+[service 14:53:39] HTTP POST /stow
+[service 14:53:40] HTTP POST /stow
+[service 14:53:41] HTTP POST /stow
+[service 14:53:42] HTTP POST /stow
+[service 14:53:43] HTTP POST /stow
+[service 14:53:44] HTTP POST /stow
+[service 14:53:45] HTTP POST /stow
+[service 14:53:46] HTTP POST /stow
+[service 14:53:47] HTTP POST /stow
+[service 14:53:48] HTTP POST /stow
+[service 14:53:49] HTTP POST /stow
+[service 14:53:51] HTTP POST /stow
+[service 14:53:52] HTTP POST /stow
+[service 14:53:53] HTTP POST /stow
+[service 14:53:54] HTTP POST /stow
+[service 14:53:55] HTTP POST /stow
+[service 14:53:56] HTTP POST /stow
+[service 14:53:57] HTTP POST /stow
+[service 14:53:58] HTTP POST /stow
+[service 14:53:59] HTTP POST /stow
+[service 14:54:00] HTTP POST /stow
+[service 14:54:01] HTTP POST /stow
+[service 14:54:02] HTTP POST /stow
+[service 14:54:03] HTTP POST /stow
+[service 14:54:04] HTTP POST /stow
+[service 14:54:05] HTTP POST /stow
+[service 14:54:06] HTTP POST /stow
+[service 14:54:07] HTTP POST /stow
+[service 14:54:08] HTTP POST /stow
+[service 14:54:09] HTTP POST /stow
+[service 14:54:10] HTTP POST /stow
+[service 14:54:11] HTTP POST /stow
+[service 14:54:12] HTTP POST /stow
+[service 14:54:13] HTTP POST /stow
+[service 14:54:14] HTTP POST /stow
+Reducing the number of VLM layers to 16 ...
+[service 14:54:15] HTTP POST /stow
+[service 14:54:16] HTTP POST /stow
+[service 14:54:17] HTTP POST /stow
+[service 14:54:18] HTTP POST /stow
+[service 14:54:19] HTTP POST /stow
+[service 14:54:20] HTTP POST /stow
+[service 14:54:21] HTTP POST /stow
+[service 14:54:22] HTTP POST /stow
+[service 14:54:23] HTTP POST /stow
+[service 14:54:24] HTTP POST /stow
+[service 14:54:25] HTTP POST /stow
+[service 14:54:26] HTTP POST /stow
+[service 14:54:27] HTTP POST /stow
+[service 14:54:28] HTTP POST /stow
+[service 14:54:29] HTTP POST /stow
+[service 14:54:30] HTTP POST /stow
+[service 14:54:31] HTTP POST /stow
+[service 14:54:32] HTTP POST /stow
+[service 14:54:33] HTTP POST /stow
+[service 14:54:34] HTTP POST /stow
+[service 14:54:35] HTTP POST /stow
+[service 14:54:36] HTTP POST /stow
+[service 14:54:37] HTTP POST /stow
+[service 14:54:38] HTTP POST /stow
+[service 14:54:39] HTTP POST /stow
+[service 14:54:40] HTTP POST /stow
+[service 14:54:41] HTTP POST /stow
+[service 14:54:42] HTTP POST /stow
+[service 14:54:43] HTTP POST /stow
+[service 14:54:44] HTTP POST /stow
+[service 14:54:45] HTTP POST /stow
+[service 14:54:47] HTTP POST /stow
+[service 14:54:48] HTTP POST /stow
+[service 14:54:49] HTTP POST /stow
+[service 14:54:50] HTTP POST /stow
+[service 14:54:51] HTTP POST /stow
+[service 14:54:52] HTTP POST /stow
+[service 14:54:53] HTTP POST /stow
+[service 14:54:54] HTTP POST /stow
+[service 14:54:55] HTTP POST /stow
+[service 14:54:56] HTTP POST /stow
+[service 14:54:57] HTTP POST /stow
+[service 14:54:58] HTTP POST /stow
+[service 14:54:59] HTTP POST /stow
+Loading weights from local directory
+[service 14:55:00] HTTP POST /stow
+[service 14:55:01] HTTP POST /stow
+[service 14:55:02] HTTP POST /stow
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 54808)
+[service 14:55:03] HTTP POST /stow
+ConnectionAbortedError: [WinError 10053] 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+----------------------------------------
+[service 14:55:04] HTTP POST /stow
+[service 14:55:05] HTTP POST /stow
+[service 14:55:06] HTTP POST /stow
+INFO 2026-10-30 14:55:06 \factory.py:100 Creating inference engine: sync
+INFO 2026-10-30 14:55:06 ence\sync.py:76 SyncInferenceEngine initialized (device=cuda, action_keys=12)
+INFO 2026-10-30 14:55:06 ence\sync.py:92 Resetting sync inference state (policy + processors)
+[service 14:55:07] HTTP POST /stow
+[service 14:55:08] HTTP POST /stow
+[service 14:55:09] HTTP POST /stow
+[service 14:55:10] HTTP POST /stow
+INFO 2026-10-30 14:55:11 ence\sync.py:92 Resetting sync inference state (policy + processors)
+[service 14:55:11] HTTP POST /stow
+[service 14:55:12] HTTP POST /stow
+[service 14:55:13] HTTP POST /stow
+INFO 2026-10-30 14:55:14 ence\sync.py:92 Resetting sync inference state (policy + processors)
+INFO 2026-10-30 14:55:14 ence\sync.py:92 Resetting sync inference state (policy + processors)
+[service 14:55:14] HTTP POST /stow
+[service 14:55:15] HTTP POST /stow
+[service 14:55:16] HTTP POST /stow
+INFO 2026-10-30 14:55:17 ence\sync.py:92 Resetting sync inference state (policy + processors)
+[service 14:55:17] HTTP POST /stow
+[service 14:55:18] HTTP POST /stow
+[service 14:55:19] HTTP POST /stow
+INFO 2026-10-30 14:55:20 ence\sync.py:92 Resetting sync inference state (policy + processors)
+[service 14:55:20] 준비 완료 394.1s -> 호출 대기 {"pour_load_connect_s": 193.6, "place_load_s": 174.5, "pour_warmup_first_s": 4.75, "pour_infer_s": 3.17, "place_warmup_first_s": 3.08, "place_infer_s": 3.0, "ready_total_s": 394.1}
+[service 14:55:20] 호출 stow -> 양팔 이동 자세
+[service 14:55:20] 이동 자세 'place_end': 7.5s 동안 이동 (가장 큰 차이 150.9도)
+Exception in thread OpenCVCamera(1)_read_loop:
+The above exception was the direct cause of the following exception:
+[service 14:55:31] 이동 자세 'place_end': 도착
+[service 14:55:31] stow 결과: {"task": "stow", "ok": true, "reason": "stowed", "started_at": "2026-10-30T14:55:20", "stow_s": 10.14}
+[service 14:55:31] HTTP POST /stow
+[camera 14:55:32] OpenCVCamera(1)(left) 프레임 끊김(OpenCVCamera(1) read thread is not running.) - 마지막 프레임으로 계속, 다시 연결 시도
+INFO 2026-10-30 14:55:35 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 14:55:35] OpenCVCamera(1) 다시 연결됨
+Exception in thread OpenCVCamera(1)_read_loop:
+The above exception was the direct cause of the following exception:
+INFO 2026-10-30 14:55:44 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 14:55:44] OpenCVCamera(1) 다시 연결됨
+INFO 2026-10-30 14:55:47 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 14:55:47] OpenCVCamera(1) 다시 연결됨
+INFO 2026-10-30 14:55:51 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 14:55:51] OpenCVCamera(1) 다시 연결됨
+[camera 14:55:52] OpenCVCamera(1)(left) 복구 - 20.1초 동안 멈춘 화면 사용
+Exception in thread OpenCVCamera(1)_read_loop:
+The above exception was the direct cause of the following exception:
+[camera 15:00:01] OpenCVCamera(1)(left) 프레임 끊김(OpenCVCamera(1) read thread is not running.) - 마지막 프레임으로 계속, 다시 연결 시도
+[camera 15:00:01] 장치 번호 다시 찾기 실패(다음 카메라를 못 찾음: {'left'}.
+현재 전체 장치 목록:
+  slot0: name='HP True Vision FHD Camera' devpath='\\\\?\\usb#vid_05c8&pid_0445&mi_00#6&14770b8b&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global'
+  slot1: name='USB 2.0 PC Cam' devpath='\\\\?\\usb#vid_090c&pid_b371&mi_00#6&2353db1a&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global'
+  slot2: name='OMEN Cam ＆ Voice' devpath=''
+  slot3: name='OBS Virtual Camera' devpath='')
+Exception in thread OpenCVCamera(2)_read_loop:
+The above exception was the direct cause of the following exception:
+INFO 2026-10-30 15:00:01 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 15:00:01] OpenCVCamera(1) 다시 연결됨
+[camera 15:00:02] OpenCVCamera(1)(left) 복구 - 1.0초 동안 멈춘 화면 사용
+[camera 15:00:02] OpenCVCamera(2)(right) 프레임 끊김(OpenCVCamera(2) read thread is not running.) - 마지막 프레임으로 계속, 다시 연결 시도
+[camera 15:00:02] 장치 번호 다시 찾기 실패(다음 카메라를 못 찾음: {'left'}.
+현재 전체 장치 목록:
+  slot0: name='HP True Vision FHD Camera' devpath='\\\\?\\usb#vid_05c8&pid_0445&mi_00#6&14770b8b&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global'
+  slot1: name='USB 2.0 PC Cam' devpath='\\\\?\\usb#vid_090c&pid_b371&mi_00#6&2353db1a&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global'
+  slot2: name='OMEN Cam ＆ Voice' devpath=''
+  slot3: name='OBS Virtual Camera' devpath='')
+Exception in thread OpenCVCamera(4)_read_loop:
+The above exception was the direct cause of the following exception:
+error = 0
+error = 0
+error = 0
+[camera 15:00:03] OpenCVCamera(4)(depth) 프레임 끊김(OpenCVCamera(4) read thread is not running.) - 마지막 프레임으로 계속, 다시 연결 시도
+[camera 15:00:04] OpenCVCamera(2) 다시 연결 실패(OpenCVCamera(2) failed to set capture_width=640 (actual_width=-1, width_success=True).) - 2초 뒤 재시도
+[service 15:00:05] 대기 중 관측 읽기 실패 1회: BiSOFollower is not connected. Run `.connect()` first.
+INFO 2026-10-30 15:00:06 a_opencv.py:196 OpenCVCamera(4) connected.
+[camera 15:00:06] OpenCVCamera(4) 다시 연결됨
+[service 15:00:14] 대기 중 관측 읽기 실패 10회: BiSOFollower is not connected. Run `.connect()` first.
+[service 15:01:04] 대기 중 관측 읽기 실패 60회: BiSOFollower is not connected. Run `.connect()` first.
+[service 15:02:04] 대기 중 관측 읽기 실패 120회: BiSOFollower is not connected. Run `.connect()` first.
+[service 15:03:04] 대기 중 관측 읽기 실패 180회: BiSOFollower is not connected. Run `.connect()` first.
+[service 15:04:04] 대기 중 관측 읽기 실패 240회: BiSOFollower is not connected. Run `.connect()` first.
+[service 15:05:04] 대기 중 관측 읽기 실패 300회: BiSOFollower is not connected. Run `.connect()` first.
+[service 15:06:04] 대기 중 관측 읽기 실패 360회: BiSOFollower is not connected. Run `.connect()` first.
+[service 15:07:04] 대기 중 관측 읽기 실패 420회: BiSOFollower is not connected. Run `.connect()` first.
+[service 15:08:04] 대기 중 관측 읽기 실패 480회: BiSOFollower is not connected. Run `.connect()` first.
+[service 15:09:04] 대기 중 관측 읽기 실패 540회: BiSOFollower is not connected. Run `.connect()` first.
+[service 15:10:04] 대기 중 관측 읽기 실패 600회: BiSOFollower is not connected. Run `.connect()` first.
+[service 15:11:04] 대기 중 관측 읽기 실패 660회: BiSOFollower is not connected. Run `.connect()` first.
+[service 15:11:29] HTTP POST /shutdown
+[service 15:11:29] 종료
+INFO 2026-10-30 15:11:31 a_opencv.py:635 OpenCVCamera(1) disconnected.
+INFO 2026-10-30 15:11:31 a_opencv.py:635 OpenCVCamera(4) disconnected.
+INFO 2026-10-30 15:11:31 follower.py:238 arms_left SOFollower disconnected.
+[camera resolve] left=1 right=2 depth=4
+[service 15:12:35] 카메라 끊김 보호 켬: 끊기면 마지막 프레임으로 계속하고 뒤에서 다시 연결
+[service 15:12:35] pour 시작 자세 = C:\Users\user\bimanual-robot\config\rollout_poses\pour.json (10관절)
+[service 15:12:35] place 끝 자세 = C:\Users\user\bimanual-robot\config\rollout_poses\place_end.json (10관절)
+[service 15:12:35] 이동 자세 = C:\Users\user\bimanual-robot\config\rollout_poses\place_end.json (10관절, 그리퍼 제외)
+[grip] left(COM3) 실행 전: 미는 힘 줄임 goal 0 -> 1255 (present 1265, 차이 -1265)
+[grip] right(COM4) 실행 전: 미는 힘 줄임 goal 0 -> 3929 (present 3939, 차이 -3939)
+INFO 2026-10-30 15:12:39 \configs.py:380 Resolved device from policy config: cuda
+INFO 2026-10-30 15:12:42 \configs.py:380 Resolved device from policy config: cuda
+[service 15:12:42] 물따르기 정책 로드 + 팔·카메라 연결
+INFO 2026-10-30 15:12:42 \context.py:245 Loading policy from 'C:\Users\user\lerobot-training\outputs/water_pour_chassis_smolvla_80/checkpoints/016000/pretrained_model'...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+INFO 2026-10-30 15:15:31 \context.py:272 Policy loaded: type=smolvla, device=cuda
+INFO 2026-10-30 15:15:31 \context.py:300 Connecting robot (bi_so_follower)...
+INFO 2026-10-30 15:15:37 a_opencv.py:196 OpenCVCamera(1) connected.
+INFO 2026-10-30 15:15:40 a_opencv.py:196 OpenCVCamera(4) connected.
+INFO 2026-10-30 15:15:40 follower.py:109 arms_left SOFollower connected.
+INFO 2026-10-30 15:15:41 a_opencv.py:196 OpenCVCamera(2) connected.
+INFO 2026-10-30 15:15:41 follower.py:109 arms_right SOFollower connected.
+INFO 2026-10-30 15:15:41 \context.py:303 Robot connected: bi_so_follower
+INFO 2026-10-30 15:15:41 \context.py:308 Captured initial robot position (12 keys)
+INFO 2026-10-30 15:15:43 \context.py:487 Creating inference engine (type=sync)...
+INFO 2026-10-30 15:15:43 \factory.py:100 Creating inference engine: sync
+INFO 2026-10-30 15:15:43 ence\sync.py:76 SyncInferenceEngine initialized (device=cuda, action_keys=12)
+INFO 2026-10-30 15:15:43 \context.py:510 Rollout context assembled successfully
+[service 15:15:43] 호출 주소 http://127.0.0.1:8770 (준비 중에는 /run 이 409 not_ready)
+[service 15:15:43] 컵배치 정책 로드
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+INFO 2026-10-30 15:18:46 \factory.py:100 Creating inference engine: sync
+INFO 2026-10-30 15:18:46 ence\sync.py:76 SyncInferenceEngine initialized (device=cuda, action_keys=12)
+INFO 2026-10-30 15:18:46 ence\sync.py:92 Resetting sync inference state (policy + processors)
+INFO 2026-10-30 15:18:50 ence\sync.py:92 Resetting sync inference state (policy + processors)
+INFO 2026-10-30 15:18:54 ence\sync.py:92 Resetting sync inference state (policy + processors)
+INFO 2026-10-30 15:18:54 ence\sync.py:92 Resetting sync inference state (policy + processors)
+INFO 2026-10-30 15:18:58 ence\sync.py:92 Resetting sync inference state (policy + processors)
+INFO 2026-10-30 15:19:03 ence\sync.py:92 Resetting sync inference state (policy + processors)
+[service 15:19:03] 준비 완료 387.8s -> 호출 대기 {"pour_load_connect_s": 180.6, "place_load_s": 183.0, "pour_warmup_first_s": 4.86, "pour_infer_s": 3.93, "place_warmup_first_s": 4.07, "place_infer_s": 4.28, "ready_total_s": 387.8}
+[service 15:19:24] 호출 stow -> 양팔 이동 자세
+[service 15:19:24] 이동 자세 'place_end': 5.0s 동안 이동 (가장 큰 차이 2.4도)
+[service 15:19:31] 이동 자세 'place_end': 도착
+[service 15:19:31] stow 결과: {"task": "stow", "ok": true, "reason": "stowed", "started_at": "2026-10-30T15:19:24", "stow_s": 6.97}
+[service 15:19:31] HTTP POST /stow
+Exception in thread OpenCVCamera(1)_read_loop:
+The above exception was the direct cause of the following exception:
+[camera 15:22:06] OpenCVCamera(1)(left) 프레임 끊김(OpenCVCamera(1) read thread is not running.) - 마지막 프레임으로 계속, 다시 연결 시도
+INFO 2026-10-30 15:22:16 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 15:22:16] OpenCVCamera(1) 다시 연결됨
+Exception in thread OpenCVCamera(1)_read_loop:
+The above exception was the direct cause of the following exception:
+INFO 2026-10-30 15:22:22 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 15:22:22] OpenCVCamera(1) 다시 연결됨
+INFO 2026-10-30 15:22:28 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 15:22:28] OpenCVCamera(1) 다시 연결됨
+INFO 2026-10-30 15:22:34 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 15:22:34] OpenCVCamera(1) 다시 연결됨
+[camera 15:22:34] OpenCVCamera(1)(left) 복구 - 28.2초 동안 멈춘 화면 사용
+[service 15:55:28] 호출 pour -> 실행
+[start] 시작 자세로 5.0s 동안 이동 (가장 큰 차이 26.4도)
+[start] 시작 자세 도착 -> 추론 시작
+INFO 2026-10-30 15:55:34 gies\core.py:65 Starting inference engine...
+INFO 2026-10-30 15:55:34 ence\sync.py:92 Resetting sync inference state (policy + processors)
+INFO 2026-10-30 15:55:34 ence\sync.py:84 SyncInferenceEngine started (inline mode — no background thread)
+INFO 2026-10-30 15:55:34 gies\core.py:70 Inference engine started
+INFO 2026-10-30 15:55:34 gies\base.py:40 Base strategy ready
+INFO 2026-10-30 15:55:34 gies\base.py:53 Base strategy control loop started
+WARNING 2026-10-30 15:55:43 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 38.09569549560547,
+WARNING 2026-10-30 15:55:43 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 43.04331970214844,
+WARNING 2026-10-30 15:55:43 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 49.02281188964844,
+WARNING 2026-10-30 15:55:43 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 56.021507263183594,
+WARNING 2026-10-30 15:55:43 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 59.10364532470703,
+WARNING 2026-10-30 15:55:43 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 63.75932312011719,
+WARNING 2026-10-30 15:55:43 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 69.28988647460938,
+WARNING 2026-10-30 15:55:43 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 73.97737121582031,
+WARNING 2026-10-30 15:55:43 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 78.34515380859375,
+WARNING 2026-10-30 15:55:43 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 79.80023193359375,
+WARNING 2026-10-30 15:55:43 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 79.26081848144531,
+WARNING 2026-10-30 15:55:43 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 82.33815002441406,
+Exception in thread OpenCVCamera(1)_read_loop:
+^^^^^^^^^^^^^
+The above exception was the direct cause of the following exception:
+[camera 15:55:48] OpenCVCamera(1)(left) 프레임 끊김(OpenCVCamera(1) read thread is not running.) - 마지막 프레임으로 계속, 다시 연결 시도
+[camera 15:55:48] 장치 번호 다시 찾기 실패(다음 카메라를 못 찾음: {'left'}.
+현재 전체 장치 목록:
+  slot0: name='HP True Vision FHD Camera' devpath='\\\\?\\usb#vid_05c8&pid_0445&mi_00#6&14770b8b&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global'
+  slot1: name='USB 2.0 PC Cam' devpath='\\\\?\\usb#vid_090c&pid_b371&mi_00#6&2353db1a&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global'
+  slot2: name='OMEN Cam ＆ Voice' devpath=''
+  slot3: name='OBS Virtual Camera' devpath='')
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 51485)
+ConnectionAbortedError: [WinError 10053] 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+----------------------------------------
+INFO 2026-10-30 15:55:59 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 15:55:59] OpenCVCamera(1) 다시 연결됨
+Exception in thread OpenCVCamera(1)_read_loop:
+The above exception was the direct cause of the following exception:
+WARNING 2026-10-30 15:56:01 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 22.189313888549805,
+WARNING 2026-10-30 15:56:01 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 35.594905853271484,
+WARNING 2026-10-30 15:56:01 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 49.34574890136719,
+WARNING 2026-10-30 15:56:01 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 49.868385314941406,
+WARNING 2026-10-30 15:56:01 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{'gripper': {'original goal_pos': 60.0498046875, 'safe goal_pos': 25.0}}
+WARNING 2026-10-30 15:56:01 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 61.581871032714844,
+WARNING 2026-10-30 15:56:01 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 71.37596130371094,
+WARNING 2026-10-30 15:56:01 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 76.03643798828125,
+WARNING 2026-10-30 15:56:01 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 77.7686767578125,
+WARNING 2026-10-30 15:56:01 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 81.81604766845703,
+WARNING 2026-10-30 15:56:01 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 83.06007385253906,
+WARNING 2026-10-30 15:56:01 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 83.04683685302734,
+WARNING 2026-10-30 15:56:01 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 83.2671127319336,
+WARNING 2026-10-30 15:56:02 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 81.9462661743164,
+WARNING 2026-10-30 15:56:02 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 83.41471862792969,
+WARNING 2026-10-30 15:56:02 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 82.34161376953125,
+WARNING 2026-10-30 15:56:02 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 82.7656021118164,
+WARNING 2026-10-30 15:56:02 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 83.31957244873047,
+WARNING 2026-10-30 15:56:02 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 84.93791961669922,
+WARNING 2026-10-30 15:56:02 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 84.32071685791016,
+WARNING 2026-10-30 15:56:02 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 84.34124755859375,
+WARNING 2026-10-30 15:56:02 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 85.23390197753906,
+WARNING 2026-10-30 15:56:02 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 82.80492401123047,
+WARNING 2026-10-30 15:56:02 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 84.52020263671875,
+WARNING 2026-10-30 15:56:02 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 85.2733154296875,
+WARNING 2026-10-30 15:56:02 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 84.79920196533203,
+WARNING 2026-10-30 15:56:02 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 86.6242904663086,
+WARNING 2026-10-30 15:56:02 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 85.94322204589844,
+INFO 2026-10-30 15:56:05 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 15:56:05] OpenCVCamera(1) 다시 연결됨
+INFO 2026-10-30 15:56:09 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 15:56:09] OpenCVCamera(1) 다시 연결됨
+INFO 2026-10-30 15:56:14 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 15:56:14] OpenCVCamera(1) 다시 연결됨
+WARNING 2026-10-30 15:56:14 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 57.732154846191406,
+WARNING 2026-10-30 15:56:14 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 54.34555435180664,
+WARNING 2026-10-30 15:56:14 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 51.26958465576172,
+WARNING 2026-10-30 15:56:14 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 52.75898742675781,
+WARNING 2026-10-30 15:56:14 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 51.10980987548828,
+INFO 2026-10-30 15:56:18 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 15:56:18] OpenCVCamera(1) 다시 연결됨
+INFO 2026-10-30 15:56:22 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 15:56:22] OpenCVCamera(1) 다시 연결됨
+Exception in thread OpenCVCamera(1)_read_loop:
+The above exception was the direct cause of the following exception:
+INFO 2026-10-30 15:56:27 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 15:56:27] OpenCVCamera(1) 다시 연결됨
+INFO 2026-10-30 15:56:31 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 15:56:31] OpenCVCamera(1) 다시 연결됨
+[service 15:56:32] HTTP POST /stop
+INFO 2026-10-30 15:56:32 ence\sync.py:88 SyncInferenceEngine stopped
+[grip] left_arm pour 끝: 정상 (goal 1452, present 1457, 차이 -5)
+[grip] right_arm pour 끝: 미는 힘 줄임 goal 3300 -> 3329 (present 3339, 차이 -39)
+[service 15:56:32] pour 끝: 마지막 자세 유지
+[service 15:56:32] pour 결과: {"task": "pour", "ok": false, "reason": "stopped", "started_at": "2026-10-30T15:55:28", "start_pose_s": 6.73, "run_s": 57.3, "call_to_first_action_s": 9.91, "policy_first_action_s": 3.14}
+[service 15:56:32] HTTP POST /run/pour
+[camera 15:56:33] OpenCVCamera(1)(left) 복구 - 44.3초 동안 멈춘 화면 사용
+[service 15:56:37] 대기 중 관측 읽기 실패 1회: Failed to sync read 'Present_Position' on ids=[1, 2, 3, 4, 5, 6] after 3 tries. [TxRxResult] There is no status packet!
+[service 15:56:40] HTTP POST /stop
+[service 15:56:47] 대기 중 관측 읽기 실패 10회: Failed to sync read 'Present_Position' on ids=[1, 2, 3, 4, 5, 6] after 3 tries. [TxRxResult] There is no status packet!
+[service 15:57:42] HTTP POST /shutdown
+[grip] left_arm 종료 시: 정상 (goal 1452, present 1457, 차이 -5)
+[grip] right_arm 종료 시: 그리퍼 응답 없음(comm=-6) - 건너뜀
+[service 15:57:43] 팔 연결 해제
+INFO 2026-10-30 15:57:43 a_opencv.py:635 OpenCVCamera(1) disconnected.
+INFO 2026-10-30 15:57:44 a_opencv.py:635 OpenCVCamera(4) disconnected.
+INFO 2026-10-30 15:57:44 follower.py:238 arms_left SOFollower disconnected.
+INFO 2026-10-30 15:57:44 a_opencv.py:635 OpenCVCamera(2) disconnected.
+INFO 2026-10-30 15:57:44 follower.py:238 arms_right SOFollower disconnected.
+[service 15:57:44] 종료
+[camera resolve] left=1 right=2 depth=4

@@ -1,0 +1,272 @@
+# launch-arms.log 발췌: 16:44 재기동 ~ 끝 (1463줄~, 반복 경고·traceback 제외). 원본 2991줄
+[service 16:45:30] 카메라 끊김 보호 켬: 끊기면 마지막 프레임으로 계속하고 뒤에서 다시 연결
+[service 16:45:30] pour 시작 자세 = C:\Users\user\bimanual-robot\config\rollout_poses\pour.json (10관절)
+[service 16:45:30] place 끝 자세 = C:\Users\user\bimanual-robot\config\rollout_poses\place_end.json (10관절)
+[service 16:45:30] 이동 자세 = C:\Users\user\bimanual-robot\config\rollout_poses\place_end.json (10관절, 그리퍼 제외)
+[grip] left(COM3) 실행 전: 토크 꺼짐 - 할 일 없음
+[grip] right(COM4) 실행 전: 토크 꺼짐 - 할 일 없음
+INFO 2026-10-30 16:45:39 \configs.py:380 Resolved device from policy config: cuda
+INFO 2026-10-30 16:45:41 \configs.py:380 Resolved device from policy config: cuda
+[service 16:45:41] 물따르기 정책 로드 + 팔·카메라 연결
+INFO 2026-10-30 16:45:41 \context.py:245 Loading policy from 'C:\Users\user\lerobot-training\outputs/water_pour_chassis_smolvla_80/checkpoints/016000/pretrained_model'...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+INFO 2026-10-30 16:48:23 \context.py:272 Policy loaded: type=smolvla, device=cuda
+INFO 2026-10-30 16:48:23 \context.py:300 Connecting robot (bi_so_follower)...
+INFO 2026-10-30 16:48:31 a_opencv.py:196 OpenCVCamera(1) connected.
+INFO 2026-10-30 16:48:35 a_opencv.py:196 OpenCVCamera(4) connected.
+INFO 2026-10-30 16:48:35 follower.py:109 arms_left SOFollower connected.
+INFO 2026-10-30 16:48:37 a_opencv.py:196 OpenCVCamera(2) connected.
+INFO 2026-10-30 16:48:37 follower.py:109 arms_right SOFollower connected.
+INFO 2026-10-30 16:48:37 \context.py:303 Robot connected: bi_so_follower
+INFO 2026-10-30 16:48:37 \context.py:308 Captured initial robot position (12 keys)
+INFO 2026-10-30 16:48:38 \context.py:487 Creating inference engine (type=sync)...
+INFO 2026-10-30 16:48:38 \factory.py:100 Creating inference engine: sync
+INFO 2026-10-30 16:48:38 ence\sync.py:76 SyncInferenceEngine initialized (device=cuda, action_keys=12)
+INFO 2026-10-30 16:48:38 \context.py:510 Rollout context assembled successfully
+[service 16:48:38] 호출 주소 http://127.0.0.1:8770 (준비 중에는 /run 이 409 not_ready)
+[service 16:48:38] 컵배치 정책 로드
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+INFO 2026-10-30 16:51:28 \factory.py:100 Creating inference engine: sync
+INFO 2026-10-30 16:51:28 ence\sync.py:76 SyncInferenceEngine initialized (device=cuda, action_keys=12)
+INFO 2026-10-30 16:51:28 ence\sync.py:92 Resetting sync inference state (policy + processors)
+INFO 2026-10-30 16:51:33 ence\sync.py:92 Resetting sync inference state (policy + processors)
+INFO 2026-10-30 16:51:36 ence\sync.py:92 Resetting sync inference state (policy + processors)
+INFO 2026-10-30 16:51:36 ence\sync.py:92 Resetting sync inference state (policy + processors)
+INFO 2026-10-30 16:51:39 ence\sync.py:92 Resetting sync inference state (policy + processors)
+INFO 2026-10-30 16:51:42 ence\sync.py:92 Resetting sync inference state (policy + processors)
+[service 16:51:42] 준비 완료 372.2s -> 호출 대기 {"pour_load_connect_s": 176.8, "place_load_s": 169.8, "pour_warmup_first_s": 4.65, "pour_infer_s": 2.94, "place_warmup_first_s": 3.32, "place_infer_s": 3.38, "ready_total_s": 372.2}
+[service 16:52:05] 호출 stow -> 양팔 이동 자세
+[service 16:52:05] 이동 자세 'place_end': 5.0s 동안 이동 (가장 큰 차이 21.1도)
+[service 16:52:13] 이동 자세 'place_end': 도착
+[service 16:52:13] stow 결과: {"task": "stow", "ok": true, "reason": "stowed", "started_at": "2026-10-30T16:52:05", "stow_s": 7.12}
+[service 16:52:13] HTTP POST /stow
+[service 16:52:22] 호출 pour -> 실행
+[start] 시작 자세로 5.0s 동안 이동 (가장 큰 차이 28.2도)
+[start] 시작 자세 도착 -> 추론 시작
+INFO 2026-10-30 16:52:29 gies\core.py:65 Starting inference engine...
+INFO 2026-10-30 16:52:29 ence\sync.py:92 Resetting sync inference state (policy + processors)
+INFO 2026-10-30 16:52:29 ence\sync.py:84 SyncInferenceEngine started (inline mode — no background thread)
+INFO 2026-10-30 16:52:29 gies\core.py:70 Inference engine started
+INFO 2026-10-30 16:52:29 gies\base.py:40 Base strategy ready
+INFO 2026-10-30 16:52:29 gies\base.py:53 Base strategy control loop started
+WARNING 2026-10-30 16:52:32 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 8.259193420410156,
+[auto] 오른손 병 놓고 빈손으로 닫음 감지 (right_gripper=9.1)
+WARNING 2026-10-30 16:52:38 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 58.35099411010742,
+WARNING 2026-10-30 16:52:38 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 62.848419189453125,
+WARNING 2026-10-30 16:52:38 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 67.78276062011719,
+WARNING 2026-10-30 16:52:38 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 69.60009002685547,
+WARNING 2026-10-30 16:52:38 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 76.91387939453125,
+WARNING 2026-10-30 16:52:38 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 79.31886291503906,
+WARNING 2026-10-30 16:52:38 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 81.299072265625,
+WARNING 2026-10-30 16:52:38 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 83.12037658691406,
+WARNING 2026-10-30 16:52:49 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 58.535125732421875,
+WARNING 2026-10-30 16:52:49 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 37.211936950683594,
+WARNING 2026-10-30 16:52:49 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 23.497400283813477,
+WARNING 2026-10-30 16:52:49 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 19.232717514038086,
+WARNING 2026-10-30 16:52:53 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 22.400617599487305,
+WARNING 2026-10-30 16:52:53 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 32.66731643676758,
+WARNING 2026-10-30 16:52:53 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 38.73259735107422,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 42.842620849609375,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 39.78235626220703,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 32.33385467529297,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 38.79570007324219,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 46.1646728515625,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 39.709503173828125,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 18.894699096679688,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 20.452430725097656,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 15.701552391052246,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 16.596363067626953,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 13.3512601852417,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 12.890873908996582,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 38.89067459106445,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 49.02386474609375,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 52.48672103881836,
+WARNING 2026-10-30 16:52:54 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 59.263824462890625,
+WARNING 2026-10-30 16:52:55 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 63.65453338623047,
+WARNING 2026-10-30 16:52:55 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 65.8855972290039,
+WARNING 2026-10-30 16:52:55 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 67.0916976928711,
+WARNING 2026-10-30 16:52:55 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 68.48209381103516,
+WARNING 2026-10-30 16:52:55 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 67.22774505615234,
+WARNING 2026-10-30 16:52:55 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 55.22108459472656,
+WARNING 2026-10-30 16:52:55 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 36.31401443481445,
+WARNING 2026-10-30 16:52:55 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 22.553678512573242,
+WARNING 2026-10-30 16:52:55 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 20.555917739868164,
+WARNING 2026-10-30 16:52:55 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 16.07154655456543,
+WARNING 2026-10-30 16:52:55 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 21.745914459228516,
+WARNING 2026-10-30 16:52:55 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 19.23885154724121,
+WARNING 2026-10-30 16:52:58 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 69.95880126953125,
+WARNING 2026-10-30 16:52:58 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 67.7860336303711,
+WARNING 2026-10-30 16:52:58 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 77.73674774169922,
+WARNING 2026-10-30 16:52:58 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 77.3289794921875,
+WARNING 2026-10-30 16:52:59 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 79.03620147705078,
+WARNING 2026-10-30 16:52:59 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 80.73145294189453,
+WARNING 2026-10-30 16:52:59 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 77.82162475585938,
+WARNING 2026-10-30 16:52:59 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 76.15310668945312,
+WARNING 2026-10-30 16:52:59 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 78.71246337890625,
+WARNING 2026-10-30 16:52:59 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 80.78349304199219,
+WARNING 2026-10-30 16:52:59 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 80.78390502929688,
+WARNING 2026-10-30 16:52:59 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 81.61829376220703,
+WARNING 2026-10-30 16:52:59 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 81.03749084472656,
+WARNING 2026-10-30 16:52:59 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'gripper': {   'original goal_pos': 82.44263458251953,
+WARNING 2026-10-30 16:53:15 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'shoulder_lift': {   'original goal_pos': 32.36197280883789,
+Exception in thread OpenCVCamera(1)_read_loop:
+The above exception was the direct cause of the following exception:
+[camera 16:53:15] OpenCVCamera(1)(left) 프레임 끊김(OpenCVCamera(1) read thread is not running.) - 마지막 프레임으로 계속, 다시 연결 시도
+[camera 16:53:16] 장치 번호 다시 찾기 실패(다음 카메라를 못 찾음: {'left'}.
+현재 전체 장치 목록:
+  slot0: name='HP True Vision FHD Camera' devpath='\\\\?\\usb#vid_05c8&pid_0445&mi_00#6&14770b8b&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global'
+  slot1: name='USB 2.0 PC Cam' devpath='\\\\?\\usb#vid_090c&pid_b371&mi_00#6&2353db1a&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global'
+  slot2: name='OMEN Cam ＆ Voice' devpath=''
+  slot3: name='OBS Virtual Camera' devpath='')
+Exception in thread OpenCVCamera(2)_read_loop:
+The above exception was the direct cause of the following exception:
+[camera 16:53:16] OpenCVCamera(1)(left) 복구 - 0.5초 동안 멈춘 화면 사용
+[camera 16:53:16] OpenCVCamera(2)(right) 프레임 끊김(OpenCVCamera(2) read thread is not running.) - 마지막 프레임으로 계속, 다시 연결 시도
+INFO 2026-10-30 16:53:16 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 16:53:16] OpenCVCamera(1) 다시 연결됨
+Exception in thread OpenCVCamera(1)_read_loop:
+The above exception was the direct cause of the following exception:
+[camera 16:53:16] OpenCVCamera(1)(left) 프레임 끊김(OpenCVCamera(1) read thread is not running.) - 마지막 프레임으로 계속, 다시 연결 시도
+[camera 16:53:16] OpenCVCamera(2)(right) 복구 - 0.3초 동안 멈춘 화면 사용
+INFO 2026-10-30 16:53:16 a_opencv.py:196 OpenCVCamera(2) connected.
+[camera 16:53:16] OpenCVCamera(2) 다시 연결됨
+WARNING 2026-10-30 16:53:24 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'shoulder_lift': {   'original goal_pos': -10.216329574584961,
+WARNING 2026-10-30 16:53:24 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'shoulder_lift': {   'original goal_pos': -11.06579875946045,
+WARNING 2026-10-30 16:53:24 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'shoulder_lift': {   'original goal_pos': -11.190879821777344,
+WARNING 2026-10-30 16:53:24 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'shoulder_lift': {   'original goal_pos': -11.954680442810059,
+INFO 2026-10-30 16:53:31 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 16:53:31] OpenCVCamera(1) 다시 연결됨
+INFO 2026-10-30 16:53:42 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 16:53:42] OpenCVCamera(1) 다시 연결됨
+[camera 16:53:44] OpenCVCamera(1)(left) 복구 - 28.0초 동안 멈춘 화면 사용
+WARNING 2026-10-30 16:54:00 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'wrist_roll': {   'original goal_pos': 103.19700622558594,
+WARNING 2026-10-30 16:54:00 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'wrist_roll': {   'original goal_pos': 86.9739990234375,
+WARNING 2026-10-30 16:54:00 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'wrist_roll': {   'original goal_pos': 76.13325500488281,
+WARNING 2026-10-30 16:54:04 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'wrist_roll': {   'original goal_pos': 23.129314422607422,
+WARNING 2026-10-30 16:54:04 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'wrist_roll': {   'original goal_pos': 24.211578369140625,
+WARNING 2026-10-30 16:54:05 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'wrist_roll': {   'original goal_pos': 21.94359016418457,
+WARNING 2026-10-30 16:54:05 ts\utils.py:121 Relative goal position magnitude had to be clamped to be safe.
+{   'wrist_roll': {   'original goal_pos': 19.45282554626465,
+INFO 2026-10-30 16:54:10 gies\base.py:70 Duration limit reached (100s)
+INFO 2026-10-30 16:54:10 ence\sync.py:88 SyncInferenceEngine stopped
+[grip] left_arm pour 끝: 미는 힘 줄임 goal 1526 -> 1577 (present 1587, 차이 -61)
+[grip] right_arm pour 끝: 미는 힘 줄임 goal 3098 -> 3053 (present 3043, 차이 55)
+[service 16:54:10] pour 끝: 마지막 자세 유지
+[service 16:54:10] pour 결과: {"task": "pour", "ok": false, "reason": "duration", "started_at": "2026-10-30T16:52:22", "start_pose_s": 6.97, "run_s": 101.14, "call_to_first_action_s": 10.18, "policy_first_action_s": 3.21}
+[service 16:54:10] HTTP POST /run/pour
+Exception in thread OpenCVCamera(1)_read_loop:
+The above exception was the direct cause of the following exception:
+[camera 16:55:17] OpenCVCamera(1)(left) 프레임 끊김(OpenCVCamera(1) read thread is not running.) - 마지막 프레임으로 계속, 다시 연결 시도
+[service 16:55:21] 대기 중 관측 읽기 실패 1회: Failed to sync read 'Present_Position' on ids=[1, 2, 3, 4, 5, 6] after 3 tries. [TxRxResult] There is no status packet!
+INFO 2026-10-30 16:55:28 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 16:55:28] OpenCVCamera(1) 다시 연결됨
+Exception in thread OpenCVCamera(1)_read_loop:
+The above exception was the direct cause of the following exception:
+INFO 2026-10-30 16:55:38 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 16:55:38] OpenCVCamera(1) 다시 연결됨
+[camera 16:55:39] OpenCVCamera(1)(left) 복구 - 22.4초 동안 멈춘 화면 사용
+[service 16:56:03] 대기 중 관측 읽기 실패 1회: Failed to sync read 'Present_Position' on ids=[1, 2, 3, 4, 5, 6] after 3 tries. [TxRxResult] There is no status packet!
+[service 16:56:14] 대기 중 관측 읽기 실패 10회: Failed to sync read 'Present_Position' on ids=[1, 2, 3, 4, 5, 6] after 3 tries. [TxRxResult] There is no status packet!
+[service 16:57:12] 대기 중 관측 읽기 실패 60회: Failed to sync read 'Present_Position' on ids=[1, 2, 3, 4, 5, 6] after 3 tries. [TxRxResult] There is no status packet!
+[camera 17:01:58] OpenCVCamera(1)(left) 프레임 끊김(OpenCVCamera(1) latest frame is too old: 622.2 ms (max allowed: 500 ms).) - 마지막 프레임으로 계속, 다시 연결 시도
+INFO 2026-10-30 17:02:10 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 17:02:10] OpenCVCamera(1) 다시 연결됨
+[camera 17:02:11] OpenCVCamera(1)(left) 복구 - 13.1초 동안 멈춘 화면 사용
+Exception in thread OpenCVCamera(1)_read_loop:
+The above exception was the direct cause of the following exception:
+[camera 17:06:05] OpenCVCamera(1)(left) 프레임 끊김(OpenCVCamera(1) read thread is not running.) - 마지막 프레임으로 계속, 다시 연결 시도
+[camera 17:06:05] 장치 번호 다시 찾기 실패(다음 카메라를 못 찾음: {'left'}.
+현재 전체 장치 목록:
+  slot0: name='HP True Vision FHD Camera' devpath='\\\\?\\usb#vid_05c8&pid_0445&mi_00#6&14770b8b&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global'
+  slot1: name='USB 2.0 PC Cam' devpath='\\\\?\\usb#vid_090c&pid_b371&mi_00#6&2353db1a&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global'
+  slot2: name='OMEN Cam ＆ Voice' devpath=''
+  slot3: name='OBS Virtual Camera' devpath='')
+INFO 2026-10-30 17:06:13 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 17:06:13] OpenCVCamera(1) 다시 연결됨
+INFO 2026-10-30 17:06:16 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 17:06:16] OpenCVCamera(1) 다시 연결됨
+INFO 2026-10-30 17:06:19 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 17:06:19] OpenCVCamera(1) 다시 연결됨
+INFO 2026-10-30 17:06:22 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 17:06:22] OpenCVCamera(1) 다시 연결됨
+INFO 2026-10-30 17:06:25 a_opencv.py:196 OpenCVCamera(1) connected.
+[camera 17:06:25] OpenCVCamera(1) 다시 연결됨
+[camera 17:06:26] OpenCVCamera(1)(left) 복구 - 21.1초 동안 멈춘 화면 사용
+
+# 집계 (1463줄~)
+Record loop 느림 경고: 934
+제어 주기 Hz: 최소 0.3, 중앙 25.1, 최대 29.9 (n=934)
+카메라 read failed 줄: 80
+    119 OpenCVCamera(1)
+     23 OpenCVCamera(2)

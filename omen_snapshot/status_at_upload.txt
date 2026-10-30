@@ -1,0 +1,13 @@
+﻿# 업로드 시점 상태 (2026-10-30 17:16:22 KST)
+배터리 31%, 전원선 Online
+Wi-Fi IP: 192.168.0.157
+예약 작업 AMRArmService: Running, 우선순위 7, 마지막 실행 10/30/2026 16:44:31
+예약 작업 AMRAstraCamera: Running, 우선순위 7, 마지막 실행 10/30/2026 14:47:37
+예약 작업 AMROrderServer: Running, 우선순위 7, 마지막 실행 10/30/2026 14:48:40
+대기 포트 :::22 PID 15120
+대기 포트 127.0.0.1:8770 PID 26196
+대기 포트 0.0.0.0:8765 PID 8444
+대기 포트 0.0.0.0:22 PID 15120
+조작 실행기 /status: {"state": "ready", "current": null, "timings": {"pour_load_connect_s": 176.8, "place_load_s": 169.8, "pour_warmup_first_s": 4.65, "pour_infer_s": 2.94, "place_w
+COM: USB-Enhanced-SERIAL CH343(COM4)
+COM: USB-Enhanced-SERIAL CH343(COM3)

@@ -1,0 +1,43 @@
+== water_pour_chassis_smolvla_80/checkpoints/016000
+  2480	config.json
+  1197789256	model.safetensors
+  661	policy_postprocessor.json
+  9144	policy_postprocessor_step_0_unnormalizer_processor.safetensors
+  2985	policy_preprocessor.json
+  1934	policy_preprocessor.json.bak
+  9152	policy_preprocessor_step_5_normalizer_processor.safetensors
+  0	tokenizer
+  8699	train_config.json
+  sha256:
+f92e75e5ae929b7b8dc9d5ae7de6e7fc3e09a25fbf9e373317fb6836bc7a8535   model.safetensors
+04d94499337944ed99a5bb86c877e6fc84f4d5613dd6ca2636d79cf0dbf59089   policy_postprocessor_step_0_unnormalizer_processor.safetensors
+3862bc419183c47c85090d024ae8e2507651993e9176206fef17e89aee0b3743   policy_preprocessor_step_5_normalizer_processor.safetensors
+10393866a4e587b1c770efc3cf3877a42a5dc5764478a5287ff5d0b95223f908   config.json
+293bd851e37ae71678b45c7e540240815d90fd01fe674833b1d29b8ab1ae9ad2   policy_postprocessor.json
+f1720f86f3050f980f9f29f77712fc319e600ffd9cc1c969eeac133c7ab049c9   policy_preprocessor.json
+61b6e70b1dbf1bb3abfc6d36b92f000f7c9a27612903f9d55bab098dea461ab1   train_config.json
+  policy_preprocessor.json vs .bak (JSON 구조 비교): steps[3].config.tokenizer_name, steps[3].artifacts.tokenizer_name 두 곳만 "tokenizer" -> 이 노트북 절대 경로(.../pretrained_model/tokenizer). 나머지 동일. 현재 파일 줄바꿈 CRLF.
+  tokenizer 폴더: chat_template.jinja tokenizer.json tokenizer_config.json 
+
+== cup_place_chassis_smolvla_80/checkpoints/007000
+  2480	config.json
+  1197789256	model.safetensors
+  661	policy_postprocessor.json
+  9144	policy_postprocessor_step_0_unnormalizer_processor.safetensors
+  2983	policy_preprocessor.json
+  1934	policy_preprocessor.json.bak
+  9152	policy_preprocessor_step_5_normalizer_processor.safetensors
+  0	tokenizer
+  8696	train_config.json
+  sha256:
+3c891baa48850f9e52babf89b7a77e36b2cf92abf128a779b01768c48ee271b6   model.safetensors
+56de9e4dcab3098e62aca330e32a0a2dafb1f4258dc510a0a6086df89d5d3e33   policy_postprocessor_step_0_unnormalizer_processor.safetensors
+729854135ac398107fd2fdedaea6e350486e55979b0298732d3aee955160ba0d   policy_preprocessor_step_5_normalizer_processor.safetensors
+10393866a4e587b1c770efc3cf3877a42a5dc5764478a5287ff5d0b95223f908   config.json
+293bd851e37ae71678b45c7e540240815d90fd01fe674833b1d29b8ab1ae9ad2   policy_postprocessor.json
+19cfe82bfeb5b1d42baefd0e655f224a0f55be474f4500668e19a61f80cb78a6   policy_preprocessor.json
+5342a2974aba4973952cd994bd3b15c9336e144b055f368dff2e3b374605a550   train_config.json
+  policy_preprocessor.json vs .bak (JSON 구조 비교): steps[3].config.tokenizer_name, steps[3].artifacts.tokenizer_name 두 곳만 "tokenizer" -> 이 노트북 절대 경로(.../pretrained_model/tokenizer). 나머지 동일. 현재 파일 줄바꿈 CRLF.
+  tokenizer 폴더: chat_template.jinja tokenizer.json tokenizer_config.json 
+
+허브 대조(메타데이터 sha256): water_pour model.safetensors = jun-seo/water_pour_chassis_smolvla_80_16000S 일치, cup_place model.safetensors = jun-seo/cup_place_chassis_smolvla_80_7000S 일치 (2026-10-30 17시경 HfApi.get_paths_info)
